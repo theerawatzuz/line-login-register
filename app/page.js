@@ -70,7 +70,10 @@ const handleGoLogin = async () => {
 return (
     <section className="bg-gray-50 dark:bg-gray-900 p-5">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto xxl:h-screen gap-3">
-      <Line onLogin={setLineDataExists} />
+      <Line onLogin={(profile) => {
+                setLineDataExists(true);
+            }} />
+            
         <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 overflow-auto">
           <div className="flex items-center justify-between mb-4">
             <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest login</h5>
