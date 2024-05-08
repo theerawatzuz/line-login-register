@@ -73,18 +73,18 @@ return (
       <Line onLogin={(profile) => {
                 setLineDataExists(true);
             }} />
-            
+
         <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 overflow-auto">
           <div className="flex items-center justify-between mb-4">
             <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest login</h5>
-                {lineDataExists ? null : (
+                {/* {lineDataExists ? null : (
                                 <button
                                     onClick={handleGoLogin}
                                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 >
                                     Log in
                                 </button>
-                            )}
+                            )} */}
             </div>
           <div className="flow-root">
             <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
