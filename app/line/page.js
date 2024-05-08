@@ -15,7 +15,8 @@ const handleLogin = async() => {
     try{
         //code
         const profile = await liff.getProfile()
-        console.log(profile)
+        const idToken =  liff.getIDToken()
+        console.log(profile,idToken)
     }catch(err){
         console.log(err)
     }
