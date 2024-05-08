@@ -21,6 +21,7 @@ const Line = () => {
 
             // เรียกใช้งานฟังก์ชันสำหรับส่งข้อมูลไปยัง API
             logUserLogin(profile);
+            onLogin(profile);
         } catch(err) {
             console.log(err);
         }
