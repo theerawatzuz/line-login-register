@@ -37,7 +37,6 @@ useEffect(() => {
         try {
             const response = await axios.get('https://ap-southeast-1.aws.data.mongodb-api.com/app/application-1-dwdap/endpoint/lineLogCallUserLogin');
             setUserData(response.data);
-            setLineDataExists(response.data.length > 0);
         } catch(error) {
             console.log('Error fetching data:', error);
         }
@@ -66,19 +65,16 @@ const handleGoLogin = async () => {
     }
 }
 
-const handleLineLogin = (profile) => {
-    setLineDataExists(!!profile);
-}
 
 
 return (
     <section className="bg-gray-50 dark:bg-gray-900 p-5">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto xxl:h-screen gap-3">
-      <Line onLogin={handleLineLogin} />
+      <Line onLogin={setLineDataExists} />
         <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 overflow-auto">
           <div className="flex items-center justify-between mb-4">
             <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest login</h5>
-                {lineDataExists && (
+                {lineDataExists ? null : (
                                 <button
                                     onClick={handleGoLogin}
                                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
