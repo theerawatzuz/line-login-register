@@ -4,6 +4,7 @@
 import react, { useEffect } from "react"
 import liff from "@line/liff"
 
+
 export default function Login() {
 useEffect(() => {
     liff.init({ liffId: '2004878671-5kGmazLb'})
@@ -59,7 +60,10 @@ const handleLoginLiff = () => {
                     <p class="text-sm text-center font-light text-gray-500 dark:text-gray-400">
                       Or continue with
                   </p>
-                  <button onClick={handleLoginLiff} type="button" class="w-full text-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#06c755] dark:hover:bg-[#05b34c] dark:focus:ring-blue-800">
+                  <button onClick={handleLoginLiff} type="button" class="w-full flex justify-center text-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#06c755] dark:hover:bg-[#05b34c] dark:focus:ring-blue-800 gap-1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg"
+                        class="object-contain h-5"
+                        ></img>
                     log in with LINE
                     </button>
                   <p class="text-sm text-center font-light text-gray-500 dark:text-gray-400">
