@@ -25,7 +25,7 @@ const handleLoginLiff = () => {
 <section class="bg-gray-50 dark:bg-gray-900">
   <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
       <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-          <img class="w-8 h-8 mr-2" src="" alt="logo"/>
+          <img class="w-8 h-8 mr-2" src="https://cdn-icons-png.flaticon.com/512/2995/2995440.png" alt="logo"/>
           Test-Login-Line    
       </a>
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -63,7 +63,7 @@ const handleLoginLiff = () => {
                     log in with LINE
                     </button>
                   <p class="text-sm text-center font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                      Don’t have an account yet? <a href="/register" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                   </p>
               </form>
           </div>
