@@ -52,6 +52,13 @@ export default function Home() {
                   <p class="text-sm text-center font-light text-gray-500 dark:text-gray-400 p-4">
                       Or continue with
                   </p>
+              
+                  <div class="divide-y divide-gray-500 ">
+                    <div>1</div>
+                    <div>1</div>
+                    
+                  </div>
+             
               </form>
           </div>
       </div>
