@@ -55,7 +55,7 @@ const Line = () => {
     return (
         <>
             {profile && (
-                <div class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                <div class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 pt-5">
                     <div class="flex justify-end px-4 pt-4"></div>
                     <div class="flex flex-col items-center pb-10">
                         <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src={profile.pictureUrl} alt="Pic Profile"/>
