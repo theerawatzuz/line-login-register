@@ -70,7 +70,7 @@ const formatTimestamp = (timestamp) => {
    </div>
    <div class="flow-root">
         <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-            {userData.map(user => (
+        {userData.slice().reverse().map(user => (
             <li key={user._id} class="pt-3 pb-3 sm:pt-4">
                 <div class="flex items-center ">
                     <div class="flex-shrink-0">
@@ -81,7 +81,7 @@ const formatTimestamp = (timestamp) => {
                             {user.userName}
                         </p>
                     </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                    <div class="inline-flex items-center text-sm text-gray-900 dark:text-white">
                     {formatTimestamp(user.timeStamp)}
                     </div>
                 </div>
