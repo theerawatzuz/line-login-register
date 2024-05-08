@@ -29,6 +29,7 @@ export default function Home() {
 // }
 
 const [userData, setUserData] = useState([]);
+const [showLoginButton, setShowLoginButton] = useState(true);
 
 useEffect(() => {
     const fetchData = async () => {
@@ -55,15 +56,26 @@ const formatTimestamp = (timestamp) => {
     return new Date(timestamp).toLocaleString('en-GB', options);
 };
 
+const handleGoLogin = async () => {
+    try {
+        window.location.href = '/login';
+    } catch(err) {
+        console.log(err);
+    }
+}
+
 
 return (
     <section className="bg-gray-50 dark:bg-gray-900 p-5">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 gap-3">
         <Line />
-        <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 overflow-auto">
+        <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 overflow-auto scrollbar-hidden">
           <div className="flex items-center justify-between mb-4">
             <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest login</h5>
-          </div>
+            {showLoginButton && (
+                <button onClick={handleGoLogin} class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Log in</button>
+            )}
+            </div>
           <div className="flow-root">
             <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
               {userData.slice().reverse().map(user => (
