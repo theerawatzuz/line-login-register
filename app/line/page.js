@@ -16,8 +16,8 @@ useEffect(() => {
 const handleLogin = async() => {
     try{
         //code
-        const profile = await liff.getProfile()
-        console.log(profile)
+        const profile = await liff.getProfile();
+        setProfile(profile);
     }catch(err){
         console.log(err)
     }
